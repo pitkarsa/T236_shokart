@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Product from './Product';
 
 export default function Home() {
     const [allProducts, setAllProducts] = useState([]);
@@ -38,15 +39,32 @@ export default function Home() {
      },[]);
 
      console.log("Home component rendered");
-     
+    //  const username= "samruddhi";
+    //  const email = "samruddhi@itvedant.com";
+
   return (
     // <div>
     //   <button onClick={() => setCount(count+1) }>You have clicked {count} times</button>
     // </div>
     <>
-      {
+      {/* {
         allProducts.map( prodObj => <h4 key={prodObj.id}>{prodObj.id} {prodObj.title}</h4>)
-      }
+      } */}
+
+        {/* props demo  
+      <Product name={username} email={email} />
+        {/* child gets the props object 
+        props = { name:"samruddhi", email:"samruddhi@itvedant.com" }
+        the props object is sent to child component Product
+      */}
+
+      <div className = "row">
+        {
+          allProducts &&
+          allProducts.map(productObj => <Product  
+            key={productObj.id} obj={productObj} />)
+        }
+      </div>
     </>
   )
 }
