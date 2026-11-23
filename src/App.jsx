@@ -4,6 +4,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css' 
 import Home from './Home'
+import { Outlet, NavLink } from 'react-router-dom'
 
 function App() { 
 
@@ -13,26 +14,32 @@ function App() {
           <nav className="navbar navbar-expand-lg " 
           style={{ backgroundColor:"#650259"}} data-bs-theme="dark">
             <div className="container-fluid">
-              <a className="navbar-brand" href="#">ShopKart_6</a>
+              {/* <a className="navbar-brand" href="/">ShopKart_6</a> */}
+              <NavLink className="navbar-brand" 
+              to={"/"}>ShopKart_6</NavLink>
               <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
               </button>
               <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                   <li className="nav-item">
-                    <a className="nav-link active" aria-current="page" href="#">Home</a>
+                    {/* <a className="nav-link active" aria-current="page" href="/">Home</a> */}
+                    <NavLink className="nav-link "  to={"/"}>Home</NavLink>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#">Login</a>
+                    {/* <a className="nav-link" href="/login">Login</a> */}
+                    <NavLink className="nav-link" to={"/login"}>Login</NavLink>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#">Register</a>
+                    <a className="nav-link" 
+                    href="/register">Register</a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#">About US</a>
+                    <a className="nav-link" href="/aboutus">About US</a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#">Contact Us</a>
+                    <a className="nav-link" 
+                    href="/contactus">Contact Us</a>
                   </li>
                 </ul>
                 {/* <form className="d-flex" role="search">
@@ -59,7 +66,9 @@ function App() {
             </ul>      
           </div>
           <div className="col-10">
-            <Home />
+           {/* static rendering
+            <Home />  */}
+            <Outlet />
           </div>
         </div>
         <div className="row">Footer</div>

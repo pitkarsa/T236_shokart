@@ -1,4 +1,5 @@
 import React from 'react'
+import './Product.css'
 
 export default function Product(props) {
     // console.log(props.obj); // props = { obj: {...... } }
@@ -8,7 +9,7 @@ export default function Product(props) {
     
   return (
     <div className='col-4 mt-2'>
-        <div className="card" style={{ width: "100%" }}>
+        <div className="card card-hover" style={{ width: "100%" }}>
             <img src={ productObject.images[0] } 
             className="card-img-top" alt="..." height="220px" />
             <div className="card-body">

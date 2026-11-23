@@ -1,0 +1,13 @@
+Library vs Framework
+====================
+basic functionalities and for additional application requirements, we need to install other libraries
+e.g. router, forms, axios, CLI, manual file/comp creation
+
+Routing
+=======
+1. npm i react-router-dom
+2. routes configuration in main.jsx 
+   RouterProvider
+3. within the navbar set the links
+4. <Outlet /> acts as placeholder to rendr the child comp
+5. SPA - using Link or NavLink instead of anchor tag

@@ -61,8 +61,8 @@ export default function Home() {
       <div className = "row">
         {
           allProducts &&
-          allProducts.map(productObj => <Product  
-            key={productObj.id} obj={productObj} />)
+          allProducts.map(productObj => 
+          <Product key={productObj.id} obj={productObj} />)
         }
       </div>
     </>
