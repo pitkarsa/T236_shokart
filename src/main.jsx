@@ -12,6 +12,7 @@ import Home from './Home.jsx'
 import AboutUs from './AboutUs.jsx'
 import ContactUs from './ContactUs.jsx'
 import ErrorPage from './ErrorPage.jsx'
+import Details from './Details.jsx'
 
 const routerArray = createBrowserRouter([
     {
@@ -22,7 +23,8 @@ const routerArray = createBrowserRouter([
         { path:'login', element : <Login /> },
         { path:'register', element: <Register />},
         { path:'aboutus', element : <AboutUs /> },
-        { path:'contactus', element: <ContactUs /> }
+        { path:'contactus', element: <ContactUs /> },
+        { path: 'details/:pid', element: <Details /> }
       ]
       // errorElement : <ErrorPage />
     }    

@@ -1,10 +1,11 @@
 import React from 'react'
 import './Product.css'
+import {NavLink} from 'react-router-dom'
 
 export default function Product(props) {
     // console.log(props.obj); // props = { obj: {...... } }
     const productObject = props.obj;
-    console.log(productObject);
+    // console.log(productObject);
     
     
   return (
@@ -17,7 +18,8 @@ export default function Product(props) {
                 <h6>Category: {productObject.category}</h6>
                 <p className="card-text">{productObject.description}</p>
                 <p><strong>{productObject.price} $</strong></p>
-                <a href="#" className="btn btn-primary">Go somewhere</a>
+                {/* <a href="#" className="btn btn-primary">Details</a> */}
+                <NavLink to={`/details/${productObject.id}`} className="btn btn-primary">Details</NavLink>
             </div>
         </div>
     </div>

@@ -6,8 +6,22 @@ e.g. router, forms, axios, CLI, manual file/comp creation
 Routing
 =======
 1. npm i react-router-dom
-2. routes configuration in main.jsx 
+2. within the Navbar set the links, observe the paths and then do the mapping in main.jsx
+3. routes configuration in main.jsx 
    RouterProvider
-3. within the navbar set the links
-4. <Outlet /> acts as placeholder to rendr the child comp
+4. <Outlet /> acts as placeholder to render the child comp
 5. SPA - using Link or NavLink instead of anchor tag
+
+
+6. redirecting from one comp to another (passing dynamic data using routing)
+/details/____
+
+
+         /details/6
+Product -------------> Details 
+         mapping in main.jsx
+    { path: 'details/:pid', element: <Details /> }
+
+
+7. programatic routing
+useNaviagte()
