@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 
 export default function Details() {
     const params = useParams(); //to capture the data sent through url 
     // console.log(params);
     const productId = params.pid ;
+    const navigate = useNavigate();
     
     // fetch api to get the specific product object
     const [selectedProductObj, setSelectedProductObj] = useState(null);
@@ -17,6 +18,12 @@ export default function Details() {
         })
     }, [])
 
+    // function goBack(){
+    //     // some logic...
+    //     navigate("/");
+    // }
+
+    const goBack = () => navigate("/");
 
     // display
 
@@ -39,6 +46,7 @@ export default function Details() {
                     <a href="#" className="btn btn-primary"><i class="bi bi-cart-plus-fill"></i></a>
                     <a href="#" className="btn btn-warning ms-2"><i class="bi bi-pencil-fill"></i></a>
                     <a href="#" className="btn btn-danger ms-2"><i class="bi bi-trash3-fill"></i></a>
+                    <button className="btn btn-info ms-2" onClick={goBack}>Back</button>
                 </div>
             </div>
         </div>

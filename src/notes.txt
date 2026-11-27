@@ -23,5 +23,17 @@ Product -------------> Details
     { path: 'details/:pid', element: <Details /> }
 
 
-7. programatic routing
-useNaviagte()
+7. programatic routing (when we cant use NavLink)
+const navigate = useNaviagte()
+
+==============================
+
+forms
+=====
+basic way to ahndle the user input - Login.jsx
+
+advanced form handling - Register.jsx
+
+1. npm i react-hook-form
+2. useForm() 
+
